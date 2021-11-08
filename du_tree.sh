@@ -27,7 +27,7 @@ used () {
             (( level-- ))
             cd ..
         fi
-    done < <(du -xms * 2> /dev/null|sort -nr|head -${lines})
+    done < <(du -xms .[!.]* * 2> /dev/null|sort -nr|head -${lines})
 }
 
 cd /
